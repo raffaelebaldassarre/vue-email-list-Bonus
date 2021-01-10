@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue-email-list - Bonus</title> 
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="app"> 
+       <div class="container d-flex">
+            <div v-for="(colonne,index in column" class="colonne d-flex">
+                <div v-for="(griglia,counter) in column[index].section" class="section d-flex" @click="selectGriglia(counter,index)">
+                    <p v-if="griglia.number > 0 && griglia.number < 6" class="yellow d-flex">{{griglia.number[0]}}</p>
+                    <p v-if= "griglia.number > 5" class="green d-flex">{{griglia.number[0]}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
